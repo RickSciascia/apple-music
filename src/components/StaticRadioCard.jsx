@@ -2,7 +2,7 @@ import Card from "react-bootstrap/Card";
 
 const StaticRadioCard = function (prop) {
   return (
-    <Card bg="dark" data-bs-theme="dark" className="border-0">
+    <Card bg="dark" data-bs-theme="dark" className="border-0 flex-grow-1">
       <Card.Body className="p-1">
         <Card.Title>Nuova Stazione Radio</Card.Title>
         <Card.Text>{prop.text}</Card.Text>

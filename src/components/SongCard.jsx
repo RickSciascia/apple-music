@@ -5,7 +5,9 @@ const SongCard = function (prop) {
       <Card.Img variant="top" src={prop.img} className="rounded-2" />
       <Card.Body className="px-0 py-2">
         <Card.Subtitle>{prop.title}</Card.Subtitle>
-        <Card.Text>{prop?.artist}</Card.Text>
+        <Card.Text>
+          <small>{prop?.artist}</small>
+        </Card.Text>
       </Card.Body>
     </Card>
   );
