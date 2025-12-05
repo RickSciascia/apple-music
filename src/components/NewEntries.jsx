@@ -19,7 +19,7 @@ const NewEntries = () => {
       })
       .then((fetchData) => {
         console.log(fetchData.data);
-        setFetchResults(fetchData.data);
+        setFetchResults(fetchData.data.slice(0, 10));
         setLoading(false);
       })
       .catch((err) => {
@@ -36,7 +36,7 @@ const NewEntries = () => {
   return (
     <Container fluid>
       <h4 className="mt-3 fw-bold text-white">Nuove uscite &gt;</h4>
-      <Row>
+      <Row xs={3} md={5} lg={5}>
         {/* qui devo fare map */}
         {loading && (
           <div className="text-center text-danger">
@@ -51,11 +51,15 @@ const NewEntries = () => {
             </p>
           </Container>
         )}
-        {fetchResults.map((song) => {
+        {fetchResults.map((song, i) => {
+          let classToInv = "min-h-100";
+          if (i >= 6) {
+            classToInv = "min-h-100 d-none d-md-block";
+          }
           return (
-            <Col xs={4} md={2} className="min-h-100">
+            <Col xs={12 / 3} md={12 / 5} lg={12 / 5} className={classToInv}>
               <SongCard
-                img={song.album.cover}
+                img={song.album.cover_big}
                 title={song.title}
                 artist={song.artist.name}
                 key={song.id}

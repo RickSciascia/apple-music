@@ -10,6 +10,7 @@ import NewEntries from "./components/NewEntries";
 function App() {
   return (
     <>
+      <title>Apple Music - Home</title>
       <MyNavbar />
       <HeroSection />
       <RadioSection />
