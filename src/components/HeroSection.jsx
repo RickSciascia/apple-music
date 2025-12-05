@@ -5,7 +5,7 @@ const HeroSection = function () {
   return (
     <Container fluid>
       <h2 className="mt-3 fw-bold text-white">Novità</h2>
-      <hr />
+      <hr className="text-white" />
       <Row className="flex-nowrap overflow-x-auto pb-3">
         <Col xs={12} sm={6} md={4} className="min-h-100">
           <StaticRadioCard

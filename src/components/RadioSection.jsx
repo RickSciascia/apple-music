@@ -4,7 +4,7 @@ import SongCard from "./SongCard";
 const RadioSection = function () {
   return (
     <Container fluid>
-      <h3 className="mt-3 fw-bold text-white">Nuovi episodi radio &gt;</h3>
+      <h4 className="mt-3 fw-bold text-white">Nuovi episodi radio &gt;</h4>
       <Row className="flex-nowrap overflow-x-auto pb-3">
         <Col xs={4} md={2} className="min-h-100">
           <SongCard img="../../public/2a.png" title="Prólogo con Abuelo" />
