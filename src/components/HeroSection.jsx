@@ -4,6 +4,15 @@ import StaticRadioCard from "./StaticRadioCard";
 const HeroSection = function () {
   return (
     <Container fluid>
+      <Row className="d-sm-none d-md-block">
+        <Col xs={12}>
+          <div>
+            <i class="bi bi-fast-forward-fill"></i>
+          </div>
+          <div></div>
+          <div></div>
+        </Col>
+      </Row>
       <h2 className="mt-3 fw-bold text-white">Novità</h2>
       <hr className="text-white" />
       <Row className="flex-nowrap overflow-x-auto pb-3">
