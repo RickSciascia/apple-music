@@ -1,16 +1,44 @@
-import { Col, Container, Row } from "react-bootstrap";
+import { Button, Col, Container, Row } from "react-bootstrap";
 import StaticRadioCard from "./StaticRadioCard";
 
 const HeroSection = function () {
   return (
     <Container fluid>
       <Row className="d-sm-none d-md-block">
-        <Col xs={12}>
-          <div>
-            <i class="bi bi-fast-forward-fill"></i>
-          </div>
-          <div></div>
-          <div></div>
+        <Col xs={12} className="my-3">
+          <Row className="d-flex">
+            <Col xs={4} className="justify-content-center">
+              <div className="text-center">
+                <a className="text-white text-decoration-none">
+                  <i className="bi bi-shuffle p-3"></i>
+                </a>
+                <a className="text-white text-decoration-none">
+                  <i className="bi bi-skip-backward-fill p-3"></i>
+                </a>
+                <a className="text-white text-decoration-none">
+                  <i className="bi bi-play-fill p-3"></i>
+                </a>
+                <a className="text-white text-decoration-none">
+                  <i className="bi bi-skip-forward-fill p-3"></i>
+                </a>
+                <a className="text-white text-decoration-none">
+                  <i className="bi bi-repeat p-3"></i>
+                </a>
+              </div>
+            </Col>
+            <Col xs={4}>
+              <div className="text-center">
+                <img src="../../public/apple.svg"></img>
+              </div>
+            </Col>
+            <Col xs={4}>
+              <div></div>
+              <Button variant="danger">
+                <i className="bi bi-person-fill pe-2"></i>
+                Accedi
+              </Button>
+            </Col>
+          </Row>
         </Col>
       </Row>
       <h2 className="mt-3 fw-bold text-white">Novità</h2>
