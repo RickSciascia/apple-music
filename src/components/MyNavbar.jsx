@@ -2,6 +2,7 @@ import { Form } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
+import { InputGroup } from "react-bootstrap";
 
 function MyNavbar() {
   return (
@@ -38,9 +39,19 @@ function MyNavbar() {
           </Nav.Link>
           <Navbar.Collapse id="navbar-nav">
             <Nav className="me-auto d-md-none">
-              <Form className="mt-3">
-                <Form.Control type="searchbox" placeholder="Cerca" />
-              </Form>
+              <InputGroup className="mb-3 p-3 text-white">
+                <InputGroup.Text
+                  id="basic-addon1"
+                  className="bg-dark border-end-0"
+                >
+                  <i className="bi bi-search text-danger"></i>
+                </InputGroup.Text>
+                <Form.Control
+                  placeholder="Ricerca"
+                  aria-describedby="basic-addon1"
+                  className="bg-dark text-white border-start-0 p-0"
+                />
+              </InputGroup>
               <Nav.Link href="/">
                 <i className="bi bi-house-door pe-3"></i>Home
               </Nav.Link>
@@ -61,13 +72,16 @@ function MyNavbar() {
             <img src="../../public/music.svg" />
           </Navbar.Brand>
         </div>
-        <Form className="mt-3 ps-3 text-start">
+        <InputGroup className="mb-3 p-3 text-white">
+          <InputGroup.Text id="basic-addon1" className="bg-dark border-end-0">
+            <i className="bi bi-search text-danger"></i>
+          </InputGroup.Text>
           <Form.Control
-            type="searchbox"
-            placeholder="Cerca"
-            className="w-100"
+            placeholder="Ricerca"
+            aria-describedby="basic-addon1"
+            className="bg-dark text-white border-start-0 p-0"
           />
-        </Form>
+        </InputGroup>
         <Nav.Link className="text-white" href="/">
           <i className="bi bi-house-door pe-3"></i>
           Home

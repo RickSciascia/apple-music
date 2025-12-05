@@ -4,7 +4,7 @@ import StaticRadioCard from "./StaticRadioCard";
 const HeroSection = function () {
   return (
     <Container fluid>
-      <Row className="d-sm-none d-md-block">
+      <Row className="d-none d-md-block">
         <Col xs={12} className="my-3">
           <Row className="d-flex justify-content-center align-content-center">
             <Col xs={4} className="justify-content-center align-content-center">
